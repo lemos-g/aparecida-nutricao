@@ -1,8 +1,10 @@
+//Mudando um título
 let titulo = document.querySelector(".titulo");
 titulo.textContent = "Aparecida Nutricionista";
 
 var pacientes = document.querySelectorAll(".paciente");
 
+//Loop para validação e cálculo do IMC
 for(let i = 0; i < pacientes.length; i++){
     console.log(pacientes[i]);
 
@@ -35,4 +37,11 @@ for(let i = 0; i < pacientes.length; i++){
         var imc = peso / (altura*altura);
         tdImc.textContent = imc.toFixed(2);
     }
+}
+
+//Escutando eventos
+titulo.addEventListener("click", mostraMensagem);
+
+function mostraMensagem(){
+    console.log("Olá, eu fui clicado!");
 }
